@@ -6,13 +6,21 @@
   </head>
 <body>
 	Página HTML  teste
-	<script src="https://grupoltmdev.service-now.com/scripts/sn_csm_ec.js?v=5.3.1"></script>
+	<!--<script src="https://grupoltmdev.service-now.com/scripts/sn_csm_ec.js?v=5.3.1"></script>
 <script>
 SN_CSM_EC.init({
 	moduleID: "https://grupoltmdev.service-now.com/#7cbad0341bafb114731632605b4bcbcc",
 	loadFeature: SN_CSM_EC.loadEMFeature()
 });
-</script>
+</script>//-->
+
+
+<script type="module" >
+      import ServiceNowChat from "https://vertem.service-now.com/scripts/now-requestor-chat-popover-app/now-requestor-chat-popover-app.min.js?sysparm_substitute=false";
+      var chat = new ServiceNowChat({ instance: "https://vertem.service-now.com", });
+ </script>
+
+	
 
 </body>
 </html>
