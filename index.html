@@ -5,15 +5,18 @@
     <title>Olá Mundo!</title>
   </head>
 <body>
-	Página HTML  teste
-	<script src="https://vertem.service-now.com/scripts/sn_csm_ec.js?v=5.5"></script>
+
+	
+Página HTML  teste
+	
+<script src="https://vertem.service-now.com/scripts/sn_csm_ec.js?v=5.5"></script>
 <script>
 
 function chatContextParam(){ 
 	return { 
 			params: { 
-				"topic_id": "testetopic_id",
-				"language": "language"		
+				"projectId": "8708db281bd5b81080df6247b04bcb79",
+				"token": "fr"		
 				} 
 		  } 
 }
@@ -22,11 +25,11 @@ function chatContextParam(){
 SN_CSM_EC.init({
 	moduleID: "https://vertem.service-now.com/#c8bf6a1e87c80254d74c0d070cbb3536",
 		
+	loadFeature: chatContextParam(),	
 	loadFeature: SN_CSM_EC.loadEMFeature(),
-	chatContextParam()
+	
 	
 });
-	
 </script>
 
 
