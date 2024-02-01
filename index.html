@@ -27,7 +27,9 @@ function chatFeatureContext(){
 SN_CSM_EC.init({
 	moduleID: "https://vertem.service-now.com/#7338369a87404254d74c0d070cbb354f",
 
-	loadFeature: chatFeatureContext()
+	loadFeature: chatFeatureContext(),
+	loadFeature: SN_CSM_EC.loadEMFeature
+	
 		
 	
 });
