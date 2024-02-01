@@ -16,16 +16,19 @@ SN_CSM_EC.init({
 	moduleID: "https://vertem.service-now.com/#7338369a87404254d74c0d070cbb354f",
 
 		
-{ 
+function chatFeatureContext(){ 
 	feature: "CHAT", 
-	params: { 
+	params: {
+		projectId: "projectIdasdasdasdasd",
+		token: "projectIdasdasdasdasd",
 		sysparm_projectId: "sysparm_projectIdasdasdasdasd",
 		sysparm_token: "sysparm_token12asdasdasdasd3d",
 	} 
 }
 	
-		
+	loadFeature: SN_CSM_EC.chatFeatureContext(),	
 	loadFeature: SN_CSM_EC.loadEMFeature()
+		
 	
 	
 });
