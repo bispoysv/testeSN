@@ -16,6 +16,7 @@ Página HTML  teste
 	function chatFeatureContext(){ 
 	return { 
 			feature: "CHAT",
+			openOnLoad: false,
 			context: {
 			vIdCon: "res_vIdCon",
 			sysparm_vIdCon: "res_sysparm_vIdCon",
@@ -31,8 +32,6 @@ Página HTML  teste
 	
 SN_CSM_EC.init({
 	moduleID: "https://grupoltmdev.service-now.com/#7cbad0341bafb114731632605b4bcbcc",
-	openOnLoad: true, 
-	
 	loadFeature: chatFeatureContext()
 
 });
