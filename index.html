@@ -14,7 +14,18 @@ Página HTML  teste
 <script>
 SN_CSM_EC.init({
 	moduleID: "https://vertem.service-now.com/#7cbad0341bafb114731632605b4bcbcc",
-	loadFeature: SN_CSM_EC.loadEMFeature()
+	openOnLoad: true, 
+	
+	loadFeature: chatFeatureContext()
+
+	function chatFeatureContext(){ 
+	return { 
+			feature: "CHAT",
+			openOnLoad: true,
+			params: { 
+				} 
+		  } 
+}
 });
 </script>
 
