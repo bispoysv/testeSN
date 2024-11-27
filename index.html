@@ -10,31 +10,27 @@
 Página HTML  teste
 
 
-<script src="https://vertem.service-now.com/scripts/sn_csm_ec.js?v=5.5"></script>
-<script>
+<!-- Start of vertem-vibe Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=73163edb-5be8-4159-b2ae-b4a2341cbabe"> 
 
-	function chatFeatureContext(){ 
-	return { 
-			feature: "CHAT",
-			openOnLoad: false,
-			context: {
-			"vIdCon": "res_vIdCon",
-			sysparm_vIdCon: "res_sysparm_vIdCon",
-			},
-			params: { 
-				"vIdParm": "res_vIdParm",
-				"sysparm_vIdCon": "res_sysparm_vIdCon"
-				
-				} 
-		  } 
-}
+
+const openWidget = () => {
 	
-SN_CSM_EC.init({
-	moduleID: "https://grupoltmdev.service-now.com/#7cbad0341bafb114731632605b4bcbcc",
-	loadFeature: chatFeatureContext()
+  // your function to trigger messaging Web Widget to open
+}
 
-});
+zE("messenger:set", "conversationFields", [
+  { 
+id: "32519660031892", 
+   value: 20 
+  }
+], openWidget)
+
+
 </script>
+
+
+<!-- End of vertem-vibe Zendesk Widget script -->
 
 	
 
