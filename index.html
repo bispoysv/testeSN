@@ -17,22 +17,28 @@ Página HTML  teste
 <script type="text/javascript">
 	
 const openWidget = () => {
-	
+
   // your function to trigger messaging Web Widget to open
 }
 
+zE("messenger:set", "conversationFields", [
+  {
+    id: "32519660031892", //Chat Context - Campaign ID
+    value: "z20" //String
+  },
+  {
+    id: "32522403902356", //Chat Context - Origin URL
+    value: "z20" //String
+  }
+];
+
+zE("messenger:set", "cookies", true);
+zE("messenger:set", "locale", "pt-br")
+zE('messenger', 'open');
+
 zE("messenger:on", "open", function () {
   console.log(`You have opened the messaging Web Widget`)
-})	
-zE('messenger', 'open');
-zE("messenger:set", "conversationFields", [
-  { 
-id: "32519660031892", 
-   value: "z20" //String
-  }
-], openWidget)
-
-
+}), openWidget)
 
 
 </script>
