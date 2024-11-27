@@ -19,6 +19,10 @@ const openWidget = () => {
   // your function to trigger messaging Web Widget to open
 }
 
+zE("messenger:on", "open", function () {
+  console.log(`You have opened the messaging Web Widget`)
+})	
+zE('messenger', 'open');
 zE("messenger:set", "conversationFields", [
   { 
 id: "32519660031892", 
