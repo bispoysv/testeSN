@@ -10,38 +10,53 @@
 Página HTML  teste
 
 
-<!-- Start of vertem-vibe Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=73163edb-5be8-4159-b2ae-b4a2341cbabe"></script>
-<!-- End of vertem-vibe Zendesk Widget script -->
+<!-- Start of Zendesk Widget script -->
+
+
+<script nonce="sdfsdfsdf" id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=73163edb-5be8-4159-b2ae-b4a2341cbabe">//Vertem Consumer Chat Web Widget</script>
 
 <script type="text/javascript">
-	
-const openWidget = () => {
-
-  // your function to trigger messaging Web Widget to open
-}
 
 zE("messenger:set", "conversationFields", [
   {
     id: "32519660031892", //Chat Context - Campaign ID
-    value: "z20" //String
+    value: "000211" //String
   },
   {
     id: "32522403902356", //Chat Context - Origin URL
-    value: "z20" //String
+    value: "www.teste.com.br" //String
+  },
+  {
+    id: "32638532356500", //Chat Context - Validation Token (JWT, Ragnarok, Cognito)
+    value: "OASDJLSDFHSKDJH65461135979F" //StringVS
   }
-]);
-
-zE("messenger:set", "cookies", true);
-zE("messenger:set", "locale", "pt-br");
-zE('messenger', 'open');
-
+]),
+zE("messenger:set", "cookies", true),
+zE("messenger:set", "locale", "pt-br"),
+zE( "messenger", "loginUser",
+  function jwtCallback(callback) {
+    callback("new-jwt-for-user")
+  },
+  function loginCallback(error) {
+    if (error) {
+      // Example error handling
+      const { type, reason, message } = error
+    }
+  }
+),
 zE("messenger:on", "open", function () {
   console.log(`You have opened the messaging Web Widget`)
-}, openWidget)
+}, openWidget);
 
+
+const openWidget = () => {
+
+// your function to trigger messaging Web Widget to open
+}
 
 </script>
+
+<!-- End of Zendesk Widget script -->
 
 	
 
